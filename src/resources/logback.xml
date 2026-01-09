@@ -1,0 +1,24 @@
+<configuration>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Deep Research specific logging -->
+    <logger name="ai.koog.deepresearch" level="INFO"/>
+    <logger name="ai.koog.deepresearch.agents" level="INFO"/>
+    <logger name="ai.koog.deepresearch.tools" level="DEBUG"/>
+    
+    <!-- Koog framework logging -->
+    <logger name="ai.koog.agents" level="WARN"/>
+    <logger name="ai.koog.prompt" level="WARN"/>
+    
+    <!-- HTTP client logging (reduce noise) -->
+    <logger name="io.ktor" level="WARN"/>
+    <logger name="io.netty" level="WARN"/>
+
+    <root level="INFO">
+        <appender-ref ref="STDOUT"/>
+    </root>
+</configuration>
