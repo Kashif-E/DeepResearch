@@ -22,7 +22,7 @@ No cloud AI APIs. No data leaves your machine (except web searches). Your models
 
 Delve uses a multi-agent pipeline to produce thorough research:
 
-1. **Clarify** — Analyzes your query, asks for clarification if ambiguous
+1. **Clarify** — Analyse your query, ask for clarification if ambiguous
 2. **Plan** — Breaks the topic into focused research questions
 3. **Research** — Dispatches parallel researcher agents that search the web, read pages, and extract findings
 4. **Report** — Synthesises everything into a cited, structured report
