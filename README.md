@@ -121,7 +121,7 @@ After a report is generated, Delve enters a follow-up loop:
 | `/memory`    | View memory stats (sessions, facts)      |
 | `/forget`    | Clear current session from memory        |
 | `/key`       | Update Tavily API key                    |
-| `/exit`      | End session (or just press Enter)        |
+| `/exit`      | End session (or  press Enter)        |
 
 Any other input is treated as a follow-up — Delve automatically classifies it and routes to the right action: synthesize from existing findings, rewrite the report, go deeper on a section, or conduct fresh research.
 
