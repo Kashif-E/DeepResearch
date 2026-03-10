@@ -105,11 +105,12 @@ suspend fun tavilySearchAsync(
                         .addHeader("Authorization", "Bearer $apiKey")
                         .post(body.toRequestBody(jsonMediaType))
                         .build()
-                    val response = client.newCall(request).execute()
-                    if (!response.isSuccessful) {
-                        throw IllegalStateException("Tavily API error ${response.code}")
+                    val result = client.newCall(request).execute().use { response ->
+                        if (!response.isSuccessful) {
+                            throw IllegalStateException("Tavily API error ${response.code}")
+                        }
+                        jsonCodec.decodeFromString(TavilySearchResponse.serializer(), response.body.string())
                     }
-                    val result = jsonCodec.decodeFromString(TavilySearchResponse.serializer(), response.body.string())
                     for (source in result.results) {
                         callbacks?.onSourceFound?.invoke(source.url, source.title)
                     }
@@ -267,7 +268,7 @@ suspend fun <T> retryWithBackoff(
     block: suspend () -> T
 ): T {
     var attempt = 0
-    var delay = initialDelayMs
+    var backoffMs = initialDelayMs
     while (true) {
         try {
             return block()
@@ -279,9 +280,9 @@ suspend fun <T> retryWithBackoff(
                 || msg.contains("connection refused") || msg.contains("connection reset")
             if (!isRetryable || attempt >= maxRetries) throw e
             attempt++
-            retryLogger.info { "Transient error (${e.javaClass.simpleName}, attempt $attempt/$maxRetries), retrying in ${delay}ms..." }
-            delay(delay)
-            delay = minOf(delay * 2, maxDelayMs)
+            retryLogger.info { "Transient error (${e.javaClass.simpleName}, attempt $attempt/$maxRetries), retrying in ${backoffMs}ms..." }
+            delay(backoffMs)
+            backoffMs = minOf(backoffMs * 2, maxDelayMs)
         }
     }
 }
