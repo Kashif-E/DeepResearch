@@ -1,0 +1,150 @@
+name: Release
+
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: write
+
+jobs:
+  build-native:
+    strategy:
+      matrix:
+        include:
+          - os: macos-latest
+            arch: aarch64
+            artifact: delve-macos-arm64
+          - os: macos-13
+            arch: x86_64
+            artifact: delve-macos-x64
+          - os: ubuntu-latest
+            arch: x86_64
+            artifact: delve-linux-x64
+          - os: ubuntu-24.04-arm
+            arch: aarch64
+            artifact: delve-linux-arm64
+          - os: windows-latest
+            arch: x86_64
+            artifact: delve-windows-x64
+
+    runs-on: ${{ matrix.os }}
+    name: Build ${{ matrix.artifact }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: graalvm/setup-graalvm@v1
+        with:
+          java-version: '25'
+          distribution: 'graalvm'
+
+      - uses: gradle/actions/setup-gradle@v4
+
+      # Windows needs Visual Studio build tools
+      - name: Set up Visual Studio shell
+        if: runner.os == 'Windows'
+        uses: ilammy/msvc-dev-cmd@v1
+
+      - name: Build native image
+        run: ./gradlew nativeCompile
+        shell: bash
+
+      # Unix artifacts
+      - name: Package (Unix)
+        if: runner.os != 'Windows'
+        run: |
+          cd build/native/nativeCompile
+          tar czf ${{ matrix.artifact }}.tar.gz delve
+          mv ${{ matrix.artifact }}.tar.gz ../../../
+
+      # Windows artifacts
+      - name: Package (Windows)
+        if: runner.os == 'Windows'
+        shell: bash
+        run: |
+          cd build/native/nativeCompile
+          7z a ${{ matrix.artifact }}.zip delve.exe
+          mv ${{ matrix.artifact }}.zip ../../../
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.artifact }}
+          path: |
+            ${{ matrix.artifact }}.tar.gz
+            ${{ matrix.artifact }}.zip
+
+  # Also build a platform-independent JVM distribution
+  build-jvm:
+    runs-on: ubuntu-latest
+    name: Build JVM dist
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: graalvm/setup-graalvm@v1
+        with:
+          java-version: '25'
+          distribution: 'graalvm'
+
+      - uses: gradle/actions/setup-gradle@v4
+
+      - name: Build JVM distribution
+        run: ./gradlew installDist
+
+      - name: Package
+        run: |
+          cd build/install
+          tar czf ../../delve-jvm.tar.gz Delve
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: delve-jvm
+          path: delve-jvm.tar.gz
+
+  release:
+    needs: [build-native, build-jvm]
+    runs-on: ubuntu-latest
+    name: Create Release
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+          merge-multiple: true
+
+      - name: List artifacts
+        run: find artifacts -type f | sort
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          generate_release_notes: true
+          files: |
+            artifacts/*.tar.gz
+            artifacts/*.zip
+          body: |
+            ## Install
+
+            **One-liner (builds from source):**
+            ```bash
+            git clone https://github.com/${{ github.repository }}.git delve
+            cd delve && ./install.sh
+            ```
+
+            **Pre-built native binaries:**
+
+            | Platform | File |
+            |----------|------|
+            | macOS Apple Silicon | `delve-macos-arm64.tar.gz` |
+            | macOS Intel | `delve-macos-x64.tar.gz` |
+            | Linux x64 | `delve-linux-x64.tar.gz` |
+            | Linux ARM64 | `delve-linux-arm64.tar.gz` |
+            | Windows x64 | `delve-windows-x64.zip` |
+            | JVM (any platform) | `delve-jvm.tar.gz` |
+
+            Download, extract, and move `delve` to a directory on your `PATH`.
+
+            **Prerequisites:** [Ollama](https://ollama.ai) + [Tavily API key](https://tavily.com) (free)

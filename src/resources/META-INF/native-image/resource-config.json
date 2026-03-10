@@ -1,0 +1,13 @@
+{
+  "resources": {
+    "includes": [
+      {"pattern": "logback\\.xml"},
+      {"pattern": "logback-test\\.xml"},
+      {"pattern": "META-INF/services/.*"},
+      {"pattern": "META-INF/native-image/.*"},
+      {"pattern": "mozilla/.*"},
+      {"pattern": ".*\\.properties"},
+      {"pattern": ".*\\.txt"}
+    ]
+  }
+}

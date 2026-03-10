@@ -1,0 +1,393 @@
+[
+  {
+    "name": "ai.kash.delve.cli.OllamaModelList",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true,
+    "allDeclaredFields": true
+  },
+  {
+    "name": "ai.kash.delve.cli.OllamaModelInfo",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true,
+    "allDeclaredFields": true
+  },
+  {
+    "name": "ai.kash.delve.cli.OllamaModelDetails",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true,
+    "allDeclaredFields": true
+  },
+  {
+    "name": "ai.kash.delve.cli.DelveConfig",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true,
+    "allDeclaredFields": true
+  },
+  {
+    "name": "ai.kash.delve.cli.DelveMCPServer",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true,
+    "allDeclaredFields": true
+  },
+  {
+    "name": "ai.kash.delve.model.MemorySufficiencyDecision",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true,
+    "allDeclaredFields": true
+  },
+  {
+    "name": "kotlin.Array",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "kotlin.String",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "java.lang.String",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "sun.security.provider.NativePRNG",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "sun.security.ssl.SSLContextImpl$TLSContext",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "ai.kash.delve.graph.SupervisorTools",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true,
+    "allDeclaredFields": true,
+    "queryAllDeclaredMethods": true
+  },
+  {
+    "name": "ai.kash.delve.graph.ResearcherTools",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true,
+    "allDeclaredFields": true,
+    "queryAllDeclaredMethods": true
+  },
+  {
+    "name": "ai.koog.agents.core.tools.annotations.Tool",
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "ai.koog.agents.core.tools.annotations.LLMDescription",
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "ai.koog.agents.core.tools.reflect.ToolSet",
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "ai.koog.prompt.executor.ollama.client.dto.OllamaChatResponseDTO",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true,
+    "allDeclaredFields": true
+  },
+  {
+    "name": "ai.koog.prompt.executor.ollama.client.dto.OllamaChatResponseDTO$Companion",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "ai.koog.prompt.executor.ollama.client.dto.OllamaChatResponseDTO$$serializer",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "ai.koog.prompt.executor.ollama.client.dto.OllamaChatRequestDTO",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true,
+    "allDeclaredFields": true
+  },
+  {
+    "name": "ai.koog.prompt.executor.ollama.client.dto.OllamaChatRequestDTO$Companion",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "ai.koog.prompt.executor.ollama.client.dto.OllamaChatRequestDTO$$serializer",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "ai.koog.prompt.executor.ollama.client.dto.OllamaChatRequestDTO$Options",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true,
+    "allDeclaredFields": true
+  },
+  {
+    "name": "ai.koog.prompt.executor.ollama.client.dto.OllamaChatRequestDTO$Options$Companion",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "ai.koog.prompt.executor.ollama.client.dto.OllamaChatRequestDTO$Options$$serializer",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "ai.koog.prompt.executor.ollama.client.dto.OllamaChatMessageDTO",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true,
+    "allDeclaredFields": true
+  },
+  {
+    "name": "ai.koog.prompt.executor.ollama.client.dto.OllamaChatMessageDTO$Companion",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "ai.koog.prompt.executor.ollama.client.dto.OllamaChatMessageDTO$$serializer",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "ai.koog.prompt.executor.ollama.client.dto.EmbeddingRequestDTO",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true,
+    "allDeclaredFields": true
+  },
+  {
+    "name": "ai.koog.prompt.executor.ollama.client.dto.EmbeddingRequestDTO$Companion",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "ai.koog.prompt.executor.ollama.client.dto.EmbeddingRequestDTO$$serializer",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "ai.koog.prompt.executor.ollama.client.dto.EmbeddingResponseDTO",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true,
+    "allDeclaredFields": true
+  },
+  {
+    "name": "ai.koog.prompt.executor.ollama.client.dto.EmbeddingResponseDTO$Companion",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "ai.koog.prompt.executor.ollama.client.dto.EmbeddingResponseDTO$$serializer",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "ai.koog.prompt.executor.ollama.client.dto.OllamaPullModelRequestDTO",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true,
+    "allDeclaredFields": true
+  },
+  {
+    "name": "ai.koog.prompt.executor.ollama.client.dto.OllamaPullModelRequestDTO$Companion",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "ai.koog.prompt.executor.ollama.client.dto.OllamaPullModelRequestDTO$$serializer",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "ai.koog.prompt.executor.ollama.client.dto.OllamaPullModelResponseDTO",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true,
+    "allDeclaredFields": true
+  },
+  {
+    "name": "ai.koog.prompt.executor.ollama.client.dto.OllamaPullModelResponseDTO$Companion",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "ai.koog.prompt.executor.ollama.client.dto.OllamaPullModelResponseDTO$$serializer",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "ai.koog.prompt.executor.ollama.client.dto.OllamaShowModelRequestDTO",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true,
+    "allDeclaredFields": true
+  },
+  {
+    "name": "ai.koog.prompt.executor.ollama.client.dto.OllamaShowModelRequestDTO$Companion",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "ai.koog.prompt.executor.ollama.client.dto.OllamaShowModelRequestDTO$$serializer",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "ai.koog.prompt.executor.ollama.client.dto.OllamaShowModelResponseDTO",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true,
+    "allDeclaredFields": true
+  },
+  {
+    "name": "ai.koog.prompt.executor.ollama.client.dto.OllamaShowModelResponseDTO$Companion",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "ai.koog.prompt.executor.ollama.client.dto.OllamaShowModelResponseDTO$$serializer",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "ai.koog.prompt.executor.ollama.client.dto.OllamaShowModelResponseDTO$Capability",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true,
+    "allDeclaredFields": true
+  },
+  {
+    "name": "ai.koog.prompt.executor.ollama.client.dto.OllamaShowModelResponseDTO$Capability$Companion",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "ai.koog.prompt.executor.ollama.client.dto.OllamaShowModelResponseDTO$Capability$$serializer",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "ai.koog.prompt.executor.ollama.client.dto.OllamaModelDetailsDTO",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true,
+    "allDeclaredFields": true
+  },
+  {
+    "name": "ai.koog.prompt.executor.ollama.client.dto.OllamaModelDetailsDTO$Companion",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "ai.koog.prompt.executor.ollama.client.dto.OllamaModelDetailsDTO$$serializer",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "ai.koog.prompt.executor.ollama.client.dto.OllamaModelInfoDTO",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true,
+    "allDeclaredFields": true
+  },
+  {
+    "name": "ai.koog.prompt.executor.ollama.client.dto.OllamaModelInfoDTO$Companion",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "ai.koog.prompt.executor.ollama.client.dto.OllamaModelInfoDTO$$serializer",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "ai.koog.prompt.executor.ollama.client.dto.OllamaModelsListResponseDTO",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true,
+    "allDeclaredFields": true
+  },
+  {
+    "name": "ai.koog.prompt.executor.ollama.client.dto.OllamaModelsListResponseDTO$Companion",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "ai.koog.prompt.executor.ollama.client.dto.OllamaModelsListResponseDTO$$serializer",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "ai.koog.prompt.executor.ollama.client.dto.OllamaToolDTO",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true,
+    "allDeclaredFields": true
+  },
+  {
+    "name": "ai.koog.prompt.executor.ollama.client.dto.OllamaToolDTO$Companion",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "ai.koog.prompt.executor.ollama.client.dto.OllamaToolDTO$$serializer",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "ai.koog.prompt.executor.ollama.client.dto.OllamaToolDTO$Definition",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true,
+    "allDeclaredFields": true
+  },
+  {
+    "name": "ai.koog.prompt.executor.ollama.client.dto.OllamaToolDTO$Definition$Companion",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "ai.koog.prompt.executor.ollama.client.dto.OllamaToolDTO$Definition$$serializer",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "ai.koog.prompt.executor.ollama.client.dto.OllamaToolCallDTO",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true,
+    "allDeclaredFields": true
+  },
+  {
+    "name": "ai.koog.prompt.executor.ollama.client.dto.OllamaToolCallDTO$Companion",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "ai.koog.prompt.executor.ollama.client.dto.OllamaToolCallDTO$$serializer",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "ai.koog.prompt.executor.ollama.client.dto.OllamaToolCallDTO$Call",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true,
+    "allDeclaredFields": true
+  },
+  {
+    "name": "ai.koog.prompt.executor.ollama.client.dto.OllamaToolCallDTO$Call$Companion",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "ai.koog.prompt.executor.ollama.client.dto.OllamaToolCallDTO$Call$$serializer",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "ai.koog.prompt.executor.ollama.client.dto.OllamaErrorResponseDTO",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true,
+    "allDeclaredFields": true
+  },
+  {
+    "name": "ai.koog.prompt.executor.ollama.client.dto.OllamaErrorResponseDTO$Companion",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "ai.koog.prompt.executor.ollama.client.dto.OllamaErrorResponseDTO$$serializer",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  }
+]
