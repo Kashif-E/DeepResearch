@@ -435,4 +435,4 @@ Everything else (GraalVM JDK 25) is handled by `install.sh`.
 
 ## License
 
-MIT
+Apache 2.0 — see [LICENSE](LICENSE) for details.
