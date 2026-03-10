@@ -15,9 +15,6 @@ jobs:
           - os: macos-latest
             arch: aarch64
             artifact: delve-macos-arm64
-          - os: macos-15-large
-            arch: x86_64
-            artifact: delve-macos-x64
           - os: ubuntu-latest
             arch: x86_64
             artifact: delve-linux-x64
@@ -139,7 +136,6 @@ jobs:
             | Platform | File |
             |----------|------|
             | macOS Apple Silicon | `delve-macos-arm64.tar.gz` |
-            | macOS Intel | `delve-macos-x64.tar.gz` |
             | Linux x64 | `delve-linux-x64.tar.gz` |
             | Linux ARM64 | `delve-linux-arm64.tar.gz` |
             | Windows x64 | `delve-windows-x64.zip` |
