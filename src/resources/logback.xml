@@ -1,0 +1,27 @@
+<configuration>
+    <!-- Console: only WARN+ so the CLI stays clean -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>WARN</level>
+        </filter>
+        <encoder>
+            <pattern>%msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Deep Research internals -->
+    <logger name="ai.kash.delve" level="DEBUG"/>
+    <logger name="ai.kash.delve.tools" level="DEBUG"/>
+
+    <!-- Koog framework -->
+    <logger name="ai.koog.agents" level="WARN"/>
+    <logger name="ai.koog.prompt" level="WARN"/>
+
+    <!-- HTTP client -->
+    <logger name="io.ktor" level="WARN"/>
+    <logger name="io.netty" level="WARN"/>
+
+    <root level="WARN">
+        <appender-ref ref="STDOUT"/>
+    </root>
+</configuration>
