@@ -25,7 +25,7 @@ Delve uses a multi-agent pipeline to produce thorough research:
 1. **Clarify** — Analyzes your query, asks for clarification if ambiguous
 2. **Plan** — Breaks the topic into focused research questions
 3. **Research** — Dispatches parallel researcher agents that search the web, read pages, and extract findings
-4. **Report** — Synthesizes everything into a cited, structured report
+4. **Report** — Synthesises everything into a cited, structured report
 
 Each researcher agent uses a ReAct loop: think about what to search, search, reflect on results, repeat. A supervisor coordinates multiple researchers in parallel and decides when coverage is sufficient.
 
